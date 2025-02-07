@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-cyber-bg text-cyber-text;
+  }
+  body {
+    @apply min-h-screen font-sans antialiased;
+  }
+  * {
+    @apply border-cyber-border;
+  }
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cyber-surface;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyber-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyber-muted;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-cyber-card border border-cyber-border rounded-xl backdrop-blur-sm;
+  }
+  .btn-primary {
+    @apply bg-cyber-accent hover:bg-cyber-accent-dim text-white font-semibold px-4 py-2 rounded-lg transition-colors;
+  }
+  .btn-ghost {
+    @apply bg-transparent hover:bg-cyber-card border border-cyber-border text-cyber-text-dim hover:text-cyber-text px-4 py-2 rounded-lg transition-colors;
+  }
+  .severity-critical {
+    @apply bg-red-500/10 text-red-400 border border-red-500/20;
+  }
+  .severity-high {
+    @apply bg-orange-500/10 text-orange-400 border border-orange-500/20;
+  }
+  .severity-medium {
+    @apply bg-yellow-500/10 text-yellow-400 border border-yellow-500/20;
+  }
+  .severity-low {
+    @apply bg-green-500/10 text-green-400 border border-green-500/20;
+  }
+  .severity-info {
+    @apply bg-slate-500/10 text-slate-400 border border-slate-500/20;
+  }
+}

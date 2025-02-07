@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield AI — Security Copilot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cs-bg font-sans text-slate-200 h-screen flex overflow-hidden">
+
+  <!-- Matrix canvas background -->
+  <canvas id="matrixCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-10"></canvas>
+
+  <!-- Mobile overlay -->
+  <div id="mobileOverlay" class="fixed inset-0 bg-black/70 z-40 hidden" onclick="toggleSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="cs-sidebar w-64 flex flex-col z-50 transition-transform">
+    <div class="p-5 border-b border-red-500/10">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-red-600 to-blue-600 flex items-center justify-center">
+          <i class="fas fa-shield-halved text-white text-sm"></i>
+        </div>
+        <div>
+          <div class="font-bold text-white font-mono text-sm">CyberShield</div>
+          <div class="text-xs text-slate-500 font-mono">AI Security Copilot</div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="flex-1 p-3 space-y-1">
+      <button onclick="showView('dashboard')" id="nav-dashboard" class="cs-nav active w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-chart-line w-4 text-center text-red-400"></i> Dashboard
+      </button>
+      <button onclick="showView('codescan')" id="nav-codescan" class="cs-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-code w-4 text-center text-blue-400"></i> Code Scan
+      </button>
+      <button onclick="showView('secrets')" id="nav-secrets" class="cs-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-key w-4 text-center text-yellow-400"></i> Secrets Scan
+      </button>
+      <button onclick="showView('owasp')" id="nav-owasp" class="cs-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-list-check w-4 text-center text-orange-400"></i> OWASP Check
+      </button>
+      <button onclick="showView('aireview')" id="nav-aireview" class="cs-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-robot w-4 text-center text-purple-400"></i> AI Review
+      </button>
+      <button onclick="showView('reports')" id="nav-reports" class="cs-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-file-shield w-4 text-center text-green-400"></i> Reports
+      </button>
+      <button onclick="showView('chat')" id="nav-chat" class="cs-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-comments w-4 text-center text-cyan-400"></i> AI Chat
+      </button>
+    </nav>
+
+    <div class="p-4 border-t border-red-500/10">
+      <div id="toolsStatus" class="text-xs text-slate-600 font-mono">Checking tools…</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="flex-1 flex flex-col overflow-hidden relative z-10">
+    <header class="flex items-center justify-between px-5 py-3 border-b border-red-500/10 bg-cs-bg/80 backdrop-blur-sm">
+      <div class="flex items-center gap-3">
+        <button onclick="toggleSidebar()" class="md:hidden text-slate-400 hover:text-white">
+          <i class="fas fa-bars"></i>
+        </button>
+        <span id="viewTitle" class="text-sm font-semibold font-mono text-red-400">// DASHBOARD</span>
+      </div>
+      <div id="connBadge" class="text-xs font-mono text-slate-500">● checking…</div>
+    </header>
+
+    <div class="flex-1 overflow-y-auto">
+
+      <!-- DASHBOARD -->
+      <div id="view-dashboard" class="view active p-5">
+
+        <!-- HERO BANNER -->
+        <div id="heroBanner" class="cs-card rounded-xl px-5 py-4 mb-5 relative" style="border-color:rgba(239,68,68,0.2);background:linear-gradient(90deg,rgba(239,68,68,0.04),rgba(59,130,246,0.04))">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-sm font-bold text-white font-mono">CyberShield AI</span>
+                <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(239,68,68,0.12);color:#ef4444">Security Copilot</span>
+              </div>
+              <p class="text-xs leading-relaxed" style="color:#94a3b8;max-width:64rem">An AI-powered security platform that scans your code for vulnerabilities, exposed secrets, CVEs, and OWASP Top 10 weaknesses. Get instant remediation suggestions, generate professional security reports, and chat with an AI security expert — all without leaving your browser.</p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <span class="text-xs px-2 py-0.5 rounded-full font-mono" style="background:rgba(239,68,68,0.08);color:#ef4444">🛡️ SAST · Secrets · OWASP Scanning</span>
+                <span class="text-xs px-2 py-0.5 rounded-full font-mono" style="background:rgba(59,130,246,0.08);color:#3b82f6">🤖 AI-Powered Remediation</span>
+                <span class="text-xs px-2 py-0.5 rounded-full font-mono" style="background:rgba(255,255,255,0.04);color:#64748b">📋 HTML · PDF · JSON Reports</span>
+              </div>
+            </div>
+            <button onclick="document.getElementById('heroBanner').style.display='none'" class="flex-shrink-0 text-lg leading-none text-slate-600 hover:text-slate-400 mt-0.5" title="Dismiss">×</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <div class="cs-card rounded-xl p-4">
+            <div class="text-xs text-slate-500 font-mono mb-1">TOTAL SCANS</div>
+            <div class="text-3xl font-bold text-white" id="stat-scans">0</div>
+          </div>
+          <div class="cs-card rounded-xl p-4">
+            <div class="text-xs text-slate-500 font-mono mb-1">CRITICAL</div>
+            <div class="text-3xl font-bold text-red-400" id="stat-critical">0</div>
+          </div>
+          <div class="cs-card rounded-xl p-4">
+            <div class="text-xs text-slate-500 font-mono mb-1">WARNINGS</div>
+            <div class="text-3xl font-bold text-yellow-400" id="stat-warnings">0</div>
+          </div>
+          <div class="cs-card rounded-xl p-4">
+            <div class="text-xs text-slate-500 font-mono mb-1">CLEAN</div>
+            <div class="text-3xl font-bold text-green-400" id="stat-clean">0</div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="cs-card rounded-xl p-4">
+            <div class="text-xs text-slate-500 font-mono mb-3">RECENT SCANS</div>
+            <div id="recentScans" class="space-y-2 text-sm">
+              <div class="text-slate-600 italic text-xs font-mono">No scans yet — run your first scan.</div>
+            </div>
+          </div>
+          <div class="cs-card rounded-xl p-4">
+            <div class="text-xs text-slate-500 font-mono mb-3">TOOLS STATUS</div>
+            <div id="toolsGrid" class="grid grid-cols-2 gap-2">
+              <div class="animate-pulse h-8 bg-white/5 rounded"></div>
+              <div class="animate-pulse h-8 bg-white/5 rounded"></div>
+              <div class="animate-pulse h-8 bg-white/5 rounded"></div>
+              <div class="animate-pulse h-8 bg-white/5 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CODE SCAN -->
+      <div id="view-codescan" class="view p-5">
+        <div class="cs-card rounded-xl p-5 mb-4">
+          <div class="grid md:grid-cols-4 gap-4 mb-4">
+            <div class="md:col-span-3">
+              <label class="block text-xs text-slate-500 font-mono mb-1">PASTE CODE TO SCAN</label>
+              <textarea id="scanCode" rows="10" placeholder="// Paste your code here for security analysis…"
+                class="cs-input w-full rounded-lg px-4 py-3 font-mono text-sm resize-none focus:outline-none"></textarea>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div>
+                <label class="block text-xs text-slate-500 font-mono mb-1">LANGUAGE</label>
+                <select id="scanLang" class="cs-input w-full rounded-lg px-3 py-2 text-sm focus:outline-none">
+                  <option value="python">Python</option>
+                  <option value="javascript">JavaScript</option>
+                  <option value="typescript">TypeScript</option>
+                  <option value="java">Java</option>
+                  <option value="go">Go</option>
+                  <option value="rust">Rust</option>
+                  <option value="php">PHP</option>
+                  <option value="sql">SQL</option>
+                </select>
+              </div>
+              <!-- Progress ring -->
+              <div class="flex flex-col items-center mt-4">
+                <svg width="80" height="80" viewBox="0 0 80 80">
+                  <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="6"/>
+                  <circle id="progressRing" cx="40" cy="40" r="34" fill="none" stroke="#ef4444" stroke-width="6"
+                    stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6"
+                    transform="rotate(-90 40 40)" style="transition:stroke-dashoffset 0.3s"/>
+                </svg>
+                <span id="progressPct" class="text-xs font-mono text-red-400 -mt-1">0%</span>
+                <span id="progressMsg" class="text-xs text-slate-600 font-mono mt-1 text-center">idle</span>
+              </div>
+              <button onclick="runScan('code')" class="btn-cs-primary mt-auto py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
+                <i class="fas fa-shield-virus"></i> Scan Code
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="scanResults" class="space-y-3"></div>
+      </div>
+
+      <!-- SECRETS SCAN -->
+      <div id="view-secrets" class="view p-5">
+        <div class="cs-card rounded-xl p-5 mb-4">
+          <label class="block text-xs text-slate-500 font-mono mb-1">CODE / CONFIGURATION TO SCAN FOR SECRETS</label>
+          <textarea id="secretsCode" rows="10" placeholder="// Paste config files, env files, or code containing potential secrets…"
+            class="cs-input w-full rounded-lg px-4 py-3 font-mono text-sm resize-none focus:outline-none mb-4"></textarea>
+          <button onclick="runScan('secrets')" class="btn-cs-primary px-6 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2">
+            <i class="fas fa-key"></i> Scan for Secrets
+          </button>
+        </div>
+        <div id="secretsResults" class="space-y-3"></div>
+      </div>
+
+      <!-- OWASP -->
+      <div id="view-owasp" class="view p-5">
+        <div class="cs-card rounded-xl p-5 mb-4">
+          <label class="block text-xs text-slate-500 font-mono mb-1">CODE FOR OWASP TOP 10 ANALYSIS</label>
+          <textarea id="owaspCode" rows="10" placeholder="// Paste code to check against OWASP Top 10 2021…"
+            class="cs-input w-full rounded-lg px-4 py-3 font-mono text-sm resize-none focus:outline-none mb-4"></textarea>
+          <button onclick="runScan('owasp')" class="btn-cs-primary px-6 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2">
+            <i class="fas fa-list-check"></i> Run OWASP Check
+          </button>
+        </div>
+        <div id="owaspResults" class="space-y-2"></div>
+      </div>
+
+      <!-- AI REVIEW -->
+      <div id="view-aireview" class="view p-5">
+        <div class="cs-card rounded-xl p-5 mb-4">
+          <label class="block text-xs text-slate-500 font-mono mb-1">CODE FOR AI SECURITY REVIEW</label>
+          <textarea id="reviewCode" rows="10" placeholder="// Submit code for a comprehensive AI-powered security narrative…"
+            class="cs-input w-full rounded-lg px-4 py-3 font-mono text-sm resize-none focus:outline-none mb-4"></textarea>
+          <div class="flex gap-3">
+            <select id="reviewLang" class="cs-input rounded-lg px-3 py-2 text-sm focus:outline-none w-40">
+              <option value="python">Python</option>
+              <option value="javascript">JavaScript</option>
+              <option value="typescript">TypeScript</option>
+              <option value="java">Java</option>
+            </select>
+            <button onclick="runScan('aireview')" class="btn-cs-primary px-6 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2">
+              <i class="fas fa-robot"></i> AI Review
+            </button>
+          </div>
+        </div>
+        <div id="aiReviewResult" class="cs-card rounded-xl p-5 hidden">
+          <div class="text-xs text-slate-500 font-mono mb-3">AI SECURITY NARRATIVE</div>
+          <div id="aiReviewText" class="text-sm text-slate-300 leading-relaxed"></div>
+        </div>
+      </div>
+
+      <!-- REPORTS -->
+      <div id="view-reports" class="view p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-sm font-semibold font-mono text-red-400">// REPORTS</h2>
+        </div>
+        <div id="reportsList" class="space-y-3">
+          <div class="text-xs text-slate-600 italic font-mono">No reports generated yet. Run a scan to generate reports.</div>
+        </div>
+      </div>
+
+      <!-- CHAT -->
+      <div id="view-chat" class="view h-full flex flex-col p-5">
+        <div id="chatMessages" class="flex-1 overflow-y-auto space-y-3 mb-4 max-h-96">
+          <div class="cs-chat-ai">
+            <i class="fas fa-shield-halved text-red-400 mr-2"></i>
+            CyberShield AI ready. Ask me about security vulnerabilities, CVEs, secure coding practices, or paste code for instant analysis.
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <input id="chatInput" type="text" placeholder="Ask about security…"
+            class="cs-input flex-1 rounded-lg px-4 py-2.5 text-sm focus:outline-none"
+            onkeydown="if(event.key==='Enter')sendChat()" />
+          <button onclick="sendChat()" class="btn-cs-primary px-5 py-2.5 rounded-lg text-sm font-semibold">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Remediation Modal -->
+  <div id="remediationModal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
+    <div class="cs-card rounded-2xl p-6 max-w-lg w-full">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-semibold font-mono text-red-400">// AI FIX SUGGESTION</h3>
+        <button onclick="closeModal()" class="text-slate-500 hover:text-white"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="remediationContent" class="text-sm text-slate-300 font-mono leading-relaxed"></div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+  <script src="app.js"></script>
+</body>
+</html>
