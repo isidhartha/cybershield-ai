@@ -118,6 +118,40 @@ POST /api/v1/chat              — Security assistant chat
 
 ---
 
+## Free local LLM option (no API key needed)
+
+CyberShield AI supports [Ollama](https://ollama.com) as a drop-in alternative to OpenAI for the AI analysis features (CVE explanations, security assistant chat, remediation suggestions). The built-in scanners work without any LLM at all.
+
+**1. Install Ollama**
+
+Download and install from [https://ollama.com](https://ollama.com), then pull a model:
+
+```bash
+ollama pull llama3.2
+```
+
+**2. Start Ollama**
+
+```bash
+ollama serve
+```
+
+**3. Switch CyberShield to Ollama**
+
+In your `.env` file, set:
+
+```
+LLM_PROVIDER=ollama
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3.2
+```
+
+Restart the backend. CVE explanations, the security assistant, and remediation suggestions will all run locally with no API key required.
+
+**Note:** The secret scanner, SAST scanner, and dependency CVE checker are fully local and do not use any LLM — they work regardless of this setting.
+
+---
+
 ## License
 
 MIT. Build on it, fork it, use it for your own security work.

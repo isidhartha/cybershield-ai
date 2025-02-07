@@ -7,6 +7,7 @@ from typing import Optional
 from ..shared.config import get_settings
 from ..shared.logging import get_logger
 from ..shared.models import RemediationRequest, Vulnerability
+from backend.llm_service import LLM_PROVIDER, complete as llm_complete
 
 logger = get_logger("remediation")
 
@@ -56,12 +57,21 @@ class RemediationEngine:
 
     async def suggest_fix(self, request: RemediationRequest) -> str:
         """Return an AI-generated remediation for the given vulnerability."""
-        provider = self.settings.ai_provider.lower()
         prompt = _build_prompt(request)
 
+        if LLM_PROVIDER == "ollama":
+            return self._fix_ollama(prompt)
+        provider = self.settings.ai_provider.lower()
         if provider == "anthropic":
             return await self._fix_anthropic(prompt)
         return await self._fix_openai(prompt)
+
+    def _fix_ollama(self, prompt: str) -> str:
+        try:
+            return llm_complete(prompt, system=REMEDIATION_SYSTEM)
+        except Exception as exc:
+            logger.error("Ollama remediation failed: %s", exc)
+            return f"AI service error: {exc}"
 
     async def _fix_openai(self, prompt: str) -> str:
         if not self.settings.openai_api_key:

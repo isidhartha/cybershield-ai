@@ -9,6 +9,7 @@ import httpx
 
 from ..shared.config import get_settings
 from ..shared.logging import get_logger
+from backend.llm_service import LLM_PROVIDER, complete as llm_complete
 
 logger = get_logger("cve_explainer")
 
@@ -109,10 +110,19 @@ class CVEExplainer:
         if not include_technical:
             prompt += "\nFocus on business impact rather than technical details."
 
+        if LLM_PROVIDER == "ollama":
+            return self._explain_ollama(prompt)
         provider = self.settings.ai_provider.lower()
         if provider == "anthropic":
             return await self._explain_anthropic(prompt)
         return await self._explain_openai(prompt)
+
+    def _explain_ollama(self, prompt: str) -> str:
+        try:
+            return llm_complete(prompt, system=CVE_SYSTEM)
+        except Exception as exc:
+            logger.error("Ollama CVE explain failed: %s", exc)
+            return f"AI explanation unavailable: {exc}"
 
     async def _explain_openai(self, prompt: str) -> str:
         if not self.settings.openai_api_key:
