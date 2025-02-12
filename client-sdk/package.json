@@ -1,0 +1,13 @@
+{
+  "name": "@isidhartha/cybershield",
+  "version": "1.0.0",
+  "description": "Node.js client for CyberShield AI — scan code for secrets, vulnerabilities, and CVEs programmatically",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {"type": "git", "url": "https://github.com/isidhartha/cybershield-ai.git"},
+  "homepage": "https://github.com/isidhartha/cybershield-ai#readme",
+  "keywords": ["security", "scanning", "cve", "secrets", "sast", "cybersecurity"],
+  "author": "Sidhartha <ramsiddhartha71154@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {"registry": "https://npm.pkg.github.com", "access": "public"}
+}

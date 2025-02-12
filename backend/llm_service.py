@@ -1,4 +1,3 @@
-"""Unified LLM service — supports OpenAI and Ollama (free, local)."""
 from __future__ import annotations
 import os
 import requests
