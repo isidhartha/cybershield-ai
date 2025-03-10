@@ -18,3 +18,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-22] reverted bad change
 [2026-02-22] code review fixes
 [2026-02-22] tests passing now
+[2026-02-23] startup time improvement
