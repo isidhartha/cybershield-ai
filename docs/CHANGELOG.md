@@ -24,3 +24,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-23] quick fix for prod issue
 [2026-02-23] notification settings
 [2026-02-23] refactor: extract constants
+[2026-02-23] test: add basic unit tests
