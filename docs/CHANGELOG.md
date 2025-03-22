@@ -26,3 +26,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-23] refactor: extract constants
 [2026-02-23] test: add basic unit tests
 [2026-02-24] header cleanup
+[2026-02-24] severity scoring calibration
