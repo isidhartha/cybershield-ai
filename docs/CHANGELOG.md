@@ -29,3 +29,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-24] severity scoring calibration
 [2026-02-24] fixed that null crash
 [2026-02-24] better separation of concerns
+[2026-02-24] fix: race condition in handler
