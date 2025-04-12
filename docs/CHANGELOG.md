@@ -34,3 +34,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-25] docs: update changelog
 [2026-02-25] working on it
 [2026-02-25] clearer contributing guide
+[2026-02-25] refactor: split into smaller functions
