@@ -38,3 +38,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-27] fixed outdated instructions
 [2026-02-27] sensible defaults
 [2026-02-27] false positive reduction
+[2026-02-27] fix: wrong variable used
