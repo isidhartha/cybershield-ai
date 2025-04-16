@@ -41,3 +41,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-27] fix: wrong variable used
 [2026-02-28] fix: log level override not working
 [2026-02-28] api docs update
+[2026-03-01] whitespace fix
