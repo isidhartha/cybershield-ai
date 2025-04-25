@@ -45,3 +45,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-01] chore: standardize naming
 [2026-03-01] added troubleshooting section
 [2026-03-01] tweaks
+[2026-03-02] reduce nesting
