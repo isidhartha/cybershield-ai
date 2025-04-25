@@ -44,3 +44,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-01] whitespace fix
 [2026-03-01] chore: standardize naming
 [2026-03-01] added troubleshooting section
+[2026-03-01] tweaks
