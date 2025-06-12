@@ -59,3 +59,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-07] scan history persistence
 [2026-03-07] address review feedback
 [2026-03-07] removed debug prints
+[2026-03-07] fix: environment variable parsing
