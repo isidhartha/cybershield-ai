@@ -63,3 +63,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-08] added integration test
 [2026-03-08] version bump
 [2026-03-08] simplified conditional
+[2026-03-08] docs: better examples
