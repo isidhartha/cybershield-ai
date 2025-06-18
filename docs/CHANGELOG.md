@@ -68,3 +68,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-08] clearer docs
 [2026-03-09] style: consistent indentation
 [2026-03-09] packages updated
+[2026-03-09] graceful degradation
