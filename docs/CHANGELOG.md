@@ -72,3 +72,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-09] finishing up
 [2026-03-09] session handling
 [2026-03-10] faster startup
+[2026-03-10] readme cleanup
