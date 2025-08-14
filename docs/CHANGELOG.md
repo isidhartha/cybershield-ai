@@ -89,3 +89,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-15] perf: cache the result
 [2026-03-15] cleaned up util functions
 [2026-03-15] refactor: simplify logic
+[2026-03-15] better getting started guide
