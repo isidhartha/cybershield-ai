@@ -92,3 +92,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-15] better getting started guide
 [2026-03-17] rough draft
 [2026-03-17] improved api documentation
+[2026-03-17] added code examples to docs
