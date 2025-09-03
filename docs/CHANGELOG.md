@@ -101,3 +101,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-18] general cleanup
 [2026-03-18] chore: remove debug logs
 [2026-03-18] chore: update dependencies
+[2026-03-21] style: quote consistency
