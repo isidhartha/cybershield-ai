@@ -104,3 +104,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-21] style: quote consistency
 [2026-03-21] expanded architecture notes
 [2026-03-21] updated readme
+[2026-03-21] fix: broken unit test
