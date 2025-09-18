@@ -119,3 +119,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-25] linting fixes
 [2026-03-25] small improvement
 [2026-03-25] osv query caching
+[2026-03-25] docs: api reference update
