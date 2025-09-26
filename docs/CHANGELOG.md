@@ -131,3 +131,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-27] fixed response format issue
 [2026-03-27] early return pattern
 [2026-03-27] hotfix: null dereference
+[2026-03-27] auth token refresh
