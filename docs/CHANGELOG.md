@@ -133,3 +133,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-27] hotfix: null dereference
 [2026-03-27] auth token refresh
 [2026-03-27] updated changelog
+[2026-03-28] finding suppression logic
