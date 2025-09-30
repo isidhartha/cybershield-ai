@@ -138,3 +138,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-28] dependency cleanup
 [2026-03-28] signal handling
 [2026-03-28] html report rendering
+[2026-03-28] sast pattern expansion
