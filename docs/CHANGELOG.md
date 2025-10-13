@@ -145,3 +145,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-01] consolidate duplicate logic
 [2026-04-01] fix: typo in error message
 [2026-04-01] guard clause cleanup
+[2026-04-01] scan queue management
