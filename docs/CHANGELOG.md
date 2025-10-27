@@ -157,3 +157,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-04] dashboard filtering fix
 [2026-04-04] merge fixes
 [2026-04-04] retry logic improved
+[2026-04-04] cache invalidation fix
