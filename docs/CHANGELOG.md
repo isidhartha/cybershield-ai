@@ -154,3 +154,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-02] fix: encoding issue in response
 [2026-04-02] improve readability
 [2026-04-04] fixed the broken test
+[2026-04-04] dashboard filtering fix
