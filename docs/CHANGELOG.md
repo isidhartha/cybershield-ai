@@ -159,3 +159,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-04] retry logic improved
 [2026-04-04] cache invalidation fix
 [2026-04-04] scanner result deduplication
+[2026-04-04] secret pattern update
