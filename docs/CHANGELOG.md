@@ -165,3 +165,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-05] quick improvement
 [2026-04-05] fixed pagination edge case
 [2026-04-05] timeout tuning
+[2026-04-05] stricter validation
