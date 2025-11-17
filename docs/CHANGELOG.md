@@ -173,3 +173,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-06] test: improve mock setup
 [2026-04-06] chore: remove unused imports
 [2026-04-06] refactor: cleaner variable names
+[2026-04-08] resource limits
