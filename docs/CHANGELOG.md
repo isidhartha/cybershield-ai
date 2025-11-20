@@ -178,3 +178,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] updated env example file
 [2026-04-08] cleanup and formatting
 [2026-04-08] addressed feedback
+[2026-04-08] ai review prompt improvement
