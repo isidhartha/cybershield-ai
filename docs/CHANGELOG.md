@@ -185,3 +185,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] better concurrency
 [2026-04-08] chore: update license year
 [2026-04-08] this should do it
+[2026-04-08] fix: missing return statement
