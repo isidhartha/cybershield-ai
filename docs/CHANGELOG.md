@@ -198,3 +198,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-11] docs: clearer setup instructions
 [2026-04-11] fix: timeout too short
 [2026-04-12] fix: response shape mismatch
+[2026-04-12] fixed edge case in prod
