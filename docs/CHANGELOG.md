@@ -195,3 +195,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-10] docs: note about environment variables
 [2026-04-11] fix: null check was missing
 [2026-04-11] entropy threshold tuning
+[2026-04-11] docs: clearer setup instructions
