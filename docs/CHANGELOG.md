@@ -201,3 +201,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-12] fixed edge case in prod
 [2026-04-13] fix: connection not closing properly
 [2026-04-13] fixed broken link in readme
+[2026-04-14] cleanup
