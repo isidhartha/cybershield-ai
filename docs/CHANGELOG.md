@@ -203,3 +203,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-13] fixed broken link in readme
 [2026-04-14] cleanup
 [2026-04-14] fixed missing null checks
+[2026-04-15] fixed typo in comment
