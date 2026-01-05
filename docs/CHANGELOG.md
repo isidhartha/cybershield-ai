@@ -222,3 +222,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-21] remediation suggestion quality
 [2026-04-21] input bounds check
 [2026-04-21] trying a different approach
+[2026-04-21] removed old commented code
