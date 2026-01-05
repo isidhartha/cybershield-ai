@@ -220,3 +220,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-21] null safety improvement
 [2026-04-21] better type handling
 [2026-04-21] remediation suggestion quality
+[2026-04-21] input bounds check
