@@ -235,3 +235,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-23] consistent naming
 [2026-04-23] hotfix: bad default config
 [2026-04-23] fixed error propagation
+[2026-04-23] updated setup docs
