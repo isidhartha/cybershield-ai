@@ -245,3 +245,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-27] fixed wrong import path
 [2026-04-27] progress
 [2026-04-27] removed magic numbers
+[2026-04-27] vulnerability grouping
