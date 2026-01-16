@@ -243,3 +243,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-25] fix: lint errors
 [2026-04-25] search ranking tweak
 [2026-04-27] fixed wrong import path
+[2026-04-27] progress
