@@ -247,3 +247,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-27] removed magic numbers
 [2026-04-27] vulnerability grouping
 [2026-04-27] improved test reliability
+[2026-04-27] style: formatting
