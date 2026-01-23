@@ -250,3 +250,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-27] style: formatting
 [2026-04-28] reverted bad change
 [2026-04-28] code review fixes
+[2026-04-28] tests passing now
