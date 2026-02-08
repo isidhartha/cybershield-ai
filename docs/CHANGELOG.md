@@ -266,3 +266,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-02] output sanitization
 [2026-05-02] docs: update changelog
 [2026-05-02] working on it
+[2026-05-02] clearer contributing guide
