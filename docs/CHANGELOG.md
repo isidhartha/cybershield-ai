@@ -273,3 +273,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-03] false positive reduction
 [2026-05-03] fix: wrong variable used
 [2026-05-04] fix: log level override not working
+[2026-05-04] api docs update
