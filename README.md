@@ -1,5 +1,7 @@
 # CyberShield AI
 
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
+
 **For authorized security testing and defensive use only. Always get permission before scanning systems you don't own.**
 
 I built CyberShield AI because the security tools I kept using were either too narrow (one tool for secrets, another for CVEs, another for SAST) or too expensive. CyberShield pulls all of it into one place with an AI layer on top that actually explains what it finds in plain English, not just dumps a list of CVE numbers at you.
@@ -65,14 +67,26 @@ CyberShield has built-in scanners that work out of the box. If you have these to
 
 ```bash
 # gitleaks — excellent for git history scanning
+
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
 # Download from: https://github.com/gitleaks/gitleaks/releases
 
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
+
 # trufflehog — high signal-to-noise secret detection
+
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
 pip install trufflehog
 
 # bearer — modern SAST with OWASP coverage
+
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
 # macOS: brew install bearer/tap/bearer
+
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
 # Linux: https://docs.bearer.com/reference/installation
+
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
 ```
 
 If none of these are installed, the built-in scanners kick in automatically. You won't notice the difference for most use cases.
