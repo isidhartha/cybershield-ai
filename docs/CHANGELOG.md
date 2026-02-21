@@ -9,3 +9,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-19] report template update
 [2026-02-20] fix: lint errors
 [2026-02-20] search ranking tweak
+[2026-02-21] fixed wrong import path
