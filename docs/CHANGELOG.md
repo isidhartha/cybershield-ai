@@ -13,3 +13,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-21] progress
 [2026-02-21] removed magic numbers
 [2026-02-21] vulnerability grouping
+[2026-02-22] improved test reliability
