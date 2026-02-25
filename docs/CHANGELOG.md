@@ -276,3 +276,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-04] api docs update
 [2026-05-04] whitespace fix
 [2026-05-04] chore: standardize naming
+[2026-05-04] added troubleshooting section
