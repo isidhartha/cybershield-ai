@@ -278,3 +278,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-04] chore: standardize naming
 [2026-05-04] added troubleshooting section
 [2026-05-05] tweaks
+[2026-05-05] reduce nesting
