@@ -51,3 +51,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-03] sync with main
 [2026-03-04] added missing docs
 [2026-03-04] test: better assertions
+[2026-03-04] fix: config values not loading
