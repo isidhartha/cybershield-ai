@@ -55,3 +55,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-04] query optimization
 [2026-03-04] got it working
 [2026-03-06] named the constants
+[2026-03-06] all tests green
