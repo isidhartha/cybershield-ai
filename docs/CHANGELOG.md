@@ -285,3 +285,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-07] added missing docs
 [2026-05-07] test: better assertions
 [2026-05-08] fix: config values not loading
+[2026-05-08] query optimization
