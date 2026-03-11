@@ -75,3 +75,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-10] readme cleanup
 [2026-03-11] removed unused dependencies
 [2026-03-11] health check endpoint
+[2026-03-11] scan scheduling
