@@ -78,3 +78,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-11] scan scheduling
 [2026-03-13] better memory usage
 [2026-03-13] mocked external dependencies
+[2026-03-13] docs: installation steps update
