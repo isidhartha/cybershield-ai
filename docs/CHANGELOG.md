@@ -81,3 +81,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-13] docs: installation steps update
 [2026-03-13] test cleanup
 [2026-03-14] minor cleanup
+[2026-03-14] polish
