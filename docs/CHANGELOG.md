@@ -86,3 +86,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-14] moved to config
 [2026-03-14] graceful shutdown
 [2026-03-15] db index added
+[2026-03-15] perf: cache the result
