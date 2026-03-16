@@ -298,3 +298,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-13] simplified conditional
 [2026-05-13] docs: better examples
 [2026-05-13] chore: remove dead code
+[2026-05-13] clearer docs
