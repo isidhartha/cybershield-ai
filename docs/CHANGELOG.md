@@ -99,3 +99,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-18] code cleanup
 [2026-03-18] removed dead code
 [2026-03-18] general cleanup
+[2026-03-18] chore: remove debug logs
