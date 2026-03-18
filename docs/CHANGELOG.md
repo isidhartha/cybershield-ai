@@ -96,3 +96,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-17] fix: bad import path
 [2026-03-17] fixed race condition in handler
 [2026-03-17] fixed config override bug
+[2026-03-18] code cleanup
