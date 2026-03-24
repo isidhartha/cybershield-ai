@@ -112,3 +112,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-22] cleaned up config
 [2026-03-22] back to simpler approach
 [2026-03-22] first pass
+[2026-03-24] dependency parser edge case
