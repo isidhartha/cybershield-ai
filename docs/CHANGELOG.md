@@ -306,3 +306,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-14] session handling
 [2026-05-14] faster startup
 [2026-05-14] readme cleanup
+[2026-05-14] removed unused dependencies
