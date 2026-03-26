@@ -124,3 +124,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-26] fixed failing test
 [2026-03-26] finally fixed that edge case
 [2026-03-26] documentation cleanup
+[2026-03-26] scanner subprocess timeout
