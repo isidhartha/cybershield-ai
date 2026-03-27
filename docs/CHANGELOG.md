@@ -127,3 +127,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-26] scanner subprocess timeout
 [2026-03-26] regression test added
 [2026-03-27] self review fixes
+[2026-03-27] added some tests
