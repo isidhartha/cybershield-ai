@@ -135,3 +135,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-27] updated changelog
 [2026-03-28] finding suppression logic
 [2026-03-28] fix: memory not released on shutdown
+[2026-03-28] dependency cleanup
