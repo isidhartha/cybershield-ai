@@ -143,3 +143,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-29] connection pool sizing
 [2026-04-01] baseline comparison
 [2026-04-01] consolidate duplicate logic
+[2026-04-01] fix: typo in error message
