@@ -141,3 +141,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-28] sast pattern expansion
 [2026-03-29] test: fix flaky test
 [2026-03-29] connection pool sizing
+[2026-04-01] baseline comparison
