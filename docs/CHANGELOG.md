@@ -150,3 +150,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-02] refactor: consolidate error handling
 [2026-04-02] removed unused variables
 [2026-04-02] request validation
+[2026-04-02] chore: rename for clarity
