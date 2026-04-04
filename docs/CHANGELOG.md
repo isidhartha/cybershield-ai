@@ -153,3 +153,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-02] chore: rename for clarity
 [2026-04-02] fix: encoding issue in response
 [2026-04-02] improve readability
+[2026-04-04] fixed the broken test
