@@ -168,3 +168,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-05] stricter validation
 [2026-04-05] perf: lazy initialization
 [2026-04-06] alternative approach
+[2026-04-06] reduced unnecessary work
