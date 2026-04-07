@@ -312,3 +312,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-15] better memory usage
 [2026-05-15] mocked external dependencies
 [2026-05-15] docs: installation steps update
+[2026-05-16] test cleanup
