@@ -183,3 +183,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] test: more edge cases
 [2026-04-08] small fix
 [2026-04-08] better concurrency
+[2026-04-08] chore: update license year
