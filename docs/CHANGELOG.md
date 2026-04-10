@@ -190,3 +190,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-10] better variable names
 [2026-04-10] pagination cursor fix
 [2026-04-10] reorganized files
+[2026-04-10] cve lookup timeout fix
