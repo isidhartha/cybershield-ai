@@ -192,3 +192,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-10] reorganized files
 [2026-04-10] cve lookup timeout fix
 [2026-04-10] gitleaks output parsing
+[2026-04-10] docs: note about environment variables
