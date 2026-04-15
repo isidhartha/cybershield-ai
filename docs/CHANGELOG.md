@@ -317,3 +317,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-16] polish
 [2026-05-16] dependency version parsing
 [2026-05-16] moved to config
+[2026-05-16] graceful shutdown
