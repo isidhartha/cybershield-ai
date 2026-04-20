@@ -213,3 +213,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-18] filter improvement
 [2026-04-20] scanner output normalization
 [2026-04-20] regex pattern optimization
+[2026-04-20] perf: avoid redundant computation
