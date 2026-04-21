@@ -217,3 +217,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-20] fix: incorrect default value
 [2026-04-20] minor tweaks
 [2026-04-20] cvss score display
+[2026-04-21] null safety improvement
