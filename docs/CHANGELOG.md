@@ -226,3 +226,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-21] more test coverage
 [2026-04-22] final touches
 [2026-04-22] docs: add missing param docs
+[2026-04-22] cleaned up after merge
