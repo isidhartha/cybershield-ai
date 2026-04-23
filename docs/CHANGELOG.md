@@ -232,3 +232,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-23] formatting cleanup
 [2026-04-23] cors fix
 [2026-04-23] batch processing improvement
+[2026-04-23] consistent naming
