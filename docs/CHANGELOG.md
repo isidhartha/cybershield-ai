@@ -237,3 +237,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-23] fixed error propagation
 [2026-04-23] updated setup docs
 [2026-04-24] post merge cleanup
+[2026-04-24] bump version
