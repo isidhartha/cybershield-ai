@@ -253,3 +253,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-28] tests passing now
 [2026-04-28] startup time improvement
 [2026-04-29] chore: bump package versions
+[2026-04-29] improved test assertions
