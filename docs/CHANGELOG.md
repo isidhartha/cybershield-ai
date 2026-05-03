@@ -269,3 +269,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-02] clearer contributing guide
 [2026-05-03] refactor: split into smaller functions
 [2026-05-03] fixed outdated instructions
+[2026-05-03] sensible defaults
