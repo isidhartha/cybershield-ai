@@ -280,3 +280,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-05] tweaks
 [2026-05-05] reduce nesting
 [2026-05-05] added edge case tests
+[2026-05-07] async fix
