@@ -282,3 +282,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-05] added edge case tests
 [2026-05-07] async fix
 [2026-05-07] sync with main
+[2026-05-07] added missing docs
