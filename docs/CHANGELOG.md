@@ -328,3 +328,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-19] added code examples to docs
 [2026-05-19] fix: bad import path
 [2026-05-19] fixed race condition in handler
+[2026-05-19] fixed config override bug
