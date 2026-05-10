@@ -289,3 +289,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-08] got it working
 [2026-05-08] named the constants
 [2026-05-08] all tests green
+[2026-05-10] scan history persistence
