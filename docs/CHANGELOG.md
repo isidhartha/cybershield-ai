@@ -294,3 +294,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-10] removed debug prints
 [2026-05-12] fix: environment variable parsing
 [2026-05-12] added integration test
+[2026-05-13] version bump
