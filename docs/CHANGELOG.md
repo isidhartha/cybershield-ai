@@ -304,3 +304,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-13] graceful degradation
 [2026-05-14] finishing up
 [2026-05-14] session handling
+[2026-05-14] faster startup
