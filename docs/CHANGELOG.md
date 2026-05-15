@@ -308,3 +308,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-14] readme cleanup
 [2026-05-14] removed unused dependencies
 [2026-05-14] health check endpoint
+[2026-05-15] scan scheduling
