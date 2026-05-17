@@ -324,3 +324,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-17] refactor: simplify logic
 [2026-05-17] better getting started guide
 [2026-05-17] rough draft
+[2026-05-17] improved api documentation
