@@ -4,12 +4,12 @@
 
 ## Demo
 
-![Demo](docs/images/demo.gif)
+![Demo Animation](docs/images/demo.gif)
 
 ### Screenshots
 
-| Desktop | Feature View | Mobile |
-|---------|-------------|--------|
+| Desktop Dashboard | Feature View | Mobile View |
+|------------------|--------------|--------------|
 | ![Desktop](docs/images/screenshot_desktop.png) | ![Feature](docs/images/screenshot_feature.png) | ![Mobile](docs/images/screenshot_mobile.png) |
 
 
@@ -135,7 +135,7 @@ POST /api/v1/chat              — Security assistant chat
 ## Configuration
 
 | Variable | Description | Default |
-|---|---|---|
+|------------------|--------------|--------------|
 | `OPENAI_API_KEY` | For AI analysis features | — |
 | `REPORTS_DIR` | Where HTML reports are saved | `/app/reports` |
 | `MAX_FILE_SIZE_MB` | Max file size for scanning | `10` |
