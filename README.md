@@ -2,6 +2,17 @@
 
 [![Discussions](https://img.shields.io/github/discussions/isidhartha/cybershield-ai)](https://github.com/isidhartha/cybershield-ai/discussions)
 
+## Demo
+
+![Demo](docs/images/demo.gif)
+
+### Screenshots
+
+| Desktop | Feature View | Mobile |
+|---------|-------------|--------|
+| ![Desktop](docs/images/screenshot_desktop.png) | ![Feature](docs/images/screenshot_feature.png) | ![Mobile](docs/images/screenshot_mobile.png) |
+
+
 **For authorized security testing and defensive use only. Always get permission before scanning systems you don't own.**
 
 I built CyberShield AI because the security tools I kept using were either too narrow (one tool for secrets, another for CVEs, another for SAST) or too expensive. CyberShield pulls all of it into one place with an AI layer on top that actually explains what it finds in plain English, not just dumps a list of CVE numbers at you.
