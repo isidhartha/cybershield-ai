@@ -18,6 +18,7 @@ services:
     environment:
       - REDIS_URL=redis://redis:6379
       - REPORT_OUTPUT_DIR=/app/reports
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://localhost:11434}
     env_file:
       - .env
     depends_on:
@@ -34,3 +35,17 @@ services:
       - "3000:80"
     depends_on:
       - backend
+
+  # ---------------------------------------------------------------------------
+  # Ollama — optional free local LLM (uncomment to run Ollama in Docker)
+  # Set LLM_PROVIDER=ollama and OLLAMA_BASE_URL=http://ollama:11434 in .env
+  # ---------------------------------------------------------------------------
+  # ollama:
+  #   image: ollama/ollama
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+
+volumes:
+  # ollama_data:

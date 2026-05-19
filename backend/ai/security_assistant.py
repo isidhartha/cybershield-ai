@@ -7,6 +7,7 @@ from typing import AsyncIterator, List, Optional
 from ..shared.config import get_settings
 from ..shared.logging import get_logger
 from ..shared.models import ChatMessage
+from backend.llm_service import LLM_PROVIDER, chat as llm_chat
 
 logger = get_logger("security_assistant")
 
@@ -59,10 +60,21 @@ class SecurityAssistant:
         context: Optional[str] = None,
     ) -> str:
         """Return a complete chat response as a string."""
+        if LLM_PROVIDER == "ollama":
+            return self._chat_ollama(messages, context)
         provider = self.settings.ai_provider.lower()
         if provider == "anthropic":
             return await self._chat_anthropic(messages, context)
         return await self._chat_openai(messages, context)
+
+    def _chat_ollama(
+        self, messages: List[ChatMessage], context: Optional[str]
+    ) -> str:
+        try:
+            return llm_chat(self._build_messages(messages, context))
+        except Exception as exc:
+            logger.error("Ollama chat failed: %s", exc)
+            return f"AI service error: {exc}"
 
     async def _chat_openai(
         self, messages: List[ChatMessage], context: Optional[str]
