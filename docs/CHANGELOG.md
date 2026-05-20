@@ -329,3 +329,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-19] fix: bad import path
 [2026-05-19] fixed race condition in handler
 [2026-05-19] fixed config override bug
+[2026-05-20] docs: document signature update atomicity requirements
