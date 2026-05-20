@@ -329,3 +329,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-19] fix: bad import path
 [2026-05-19] fixed race condition in handler
 [2026-05-19] fixed config override bug
+[2026-05-21] docs: add remediation guide for OWASP Top 10
