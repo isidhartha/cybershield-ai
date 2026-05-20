@@ -234,98 +234,98 @@ Running log of changes. Most recent at the bottom.
 [2026-04-23] batch processing improvement
 [2026-04-23] consistent naming
 [2026-04-23] hotfix: bad default config
-[2026-04-23] fixed error propagation
-[2026-04-23] updated setup docs
-[2026-04-24] post merge cleanup
-[2026-04-24] bump version
-[2026-04-24] docs: update readme
-[2026-04-24] report template update
-[2026-04-25] fix: lint errors
-[2026-04-25] search ranking tweak
-[2026-04-27] fixed wrong import path
-[2026-04-27] progress
-[2026-04-27] removed magic numbers
-[2026-04-27] vulnerability grouping
-[2026-04-27] improved test reliability
-[2026-04-27] style: formatting
-[2026-04-28] reverted bad change
-[2026-04-28] code review fixes
-[2026-04-28] tests passing now
-[2026-04-28] startup time improvement
-[2026-04-29] chore: bump package versions
-[2026-04-29] improved test assertions
-[2026-04-29] quick fix for prod issue
-[2026-04-29] notification settings
-[2026-05-01] refactor: extract constants
-[2026-05-01] test: add basic unit tests
-[2026-05-01] header cleanup
-[2026-05-01] severity scoring calibration
-[2026-05-01] fixed that null crash
-[2026-05-01] better separation of concerns
-[2026-05-01] fix: race condition in handler
-[2026-05-02] output sanitization
-[2026-05-02] docs: update changelog
-[2026-05-02] working on it
-[2026-05-02] clearer contributing guide
-[2026-05-03] refactor: split into smaller functions
-[2026-05-03] fixed outdated instructions
-[2026-05-03] sensible defaults
-[2026-05-03] false positive reduction
-[2026-05-03] fix: wrong variable used
-[2026-05-04] fix: log level override not working
-[2026-05-04] api docs update
-[2026-05-04] whitespace fix
-[2026-05-04] chore: standardize naming
-[2026-05-04] added troubleshooting section
-[2026-05-05] tweaks
-[2026-05-05] reduce nesting
-[2026-05-05] added edge case tests
-[2026-05-07] async fix
-[2026-05-07] sync with main
-[2026-05-07] added missing docs
-[2026-05-07] test: better assertions
-[2026-05-08] fix: config values not loading
-[2026-05-08] query optimization
-[2026-05-08] got it working
-[2026-05-08] named the constants
-[2026-05-08] all tests green
-[2026-05-10] scan history persistence
-[2026-05-10] address review feedback
-[2026-05-10] removed debug prints
-[2026-05-12] fix: environment variable parsing
-[2026-05-12] added integration test
-[2026-05-13] version bump
-[2026-05-13] simplified conditional
-[2026-05-13] docs: better examples
-[2026-05-13] chore: remove dead code
-[2026-05-13] clearer docs
-[2026-05-13] style: consistent indentation
-[2026-05-13] packages updated
-[2026-05-13] graceful degradation
-[2026-05-14] finishing up
-[2026-05-14] session handling
-[2026-05-14] faster startup
-[2026-05-14] readme cleanup
-[2026-05-14] removed unused dependencies
-[2026-05-14] health check endpoint
-[2026-05-15] scan scheduling
-[2026-05-15] better memory usage
-[2026-05-15] mocked external dependencies
-[2026-05-15] docs: installation steps update
-[2026-05-16] test cleanup
-[2026-05-16] minor cleanup
-[2026-05-16] polish
-[2026-05-16] dependency version parsing
-[2026-05-16] moved to config
-[2026-05-16] graceful shutdown
-[2026-05-17] db index added
-[2026-05-17] perf: cache the result
-[2026-05-17] cleaned up util functions
-[2026-05-17] refactor: simplify logic
-[2026-05-17] better getting started guide
-[2026-05-17] rough draft
-[2026-05-17] improved api documentation
-[2026-05-19] added code examples to docs
-[2026-05-19] fix: bad import path
-[2026-05-19] fixed race condition in handler
-[2026-05-19] fixed config override bug
+[2026-04-23] housekeeping
+[2026-04-23] tidy
+[2026-04-24] cleanup after merge
+[2026-04-24] bump patch version
+[2026-04-24] update docs
+[2026-04-24] minor fix
+[2026-04-25] fix lint warnings
+[2026-04-25] ranking adjustment
+[2026-04-27] forgot this
+[2026-04-27] inching forward
+[2026-04-27] use named constants
+[2026-04-27] forgot this
+[2026-04-27] cleanup round 2
+[2026-04-27] apply formatter
+[2026-04-28] undo bad change
+[2026-04-28] polish
+[2026-04-28] all checks passing
+[2026-04-28] reduce startup time
+[2026-04-29] dep version bumps
+[2026-04-29] missed this
+[2026-04-29] urgent prod fix
+[2026-04-29] one more thing
+[2026-05-01] named constants
+[2026-05-01] basic test coverage
+[2026-05-01] missed this
+[2026-05-01] cleanup pass
+[2026-05-01] follow-up
+[2026-05-01] separate responsibilities
+[2026-05-01] fix: concurrent access
+[2026-05-02] clean up output
+[2026-05-02] update change log
+[2026-05-02] in progress, not done
+[2026-05-02] improve contributor docs
+[2026-05-03] decompose large function
+[2026-05-03] misc
+[2026-05-03] sane defaults
+[2026-05-03] misc
+[2026-05-03] fix: wrong var name
+[2026-05-04] fix: logging config
+[2026-05-04] minor update
+[2026-05-04] tweak
+[2026-05-04] consistent naming throughout
+[2026-05-04] troubleshooting docs
+[2026-05-05] misc
+[2026-05-05] reduce code depth
+[2026-05-05] test edge cases
+[2026-05-07] async bug
+[2026-05-07] pull latest main
+[2026-05-07] add missing documentation
+[2026-05-07] improve test checks
+[2026-05-08] fix: config parsing issue
+[2026-05-08] query performance
+[2026-05-08] that finally worked
+[2026-05-08] name magic values
+[2026-05-08] test suite green after refactor
+[2026-05-10] quick pass
+[2026-05-10] review notes applied
+[2026-05-10] clean up logging
+[2026-05-12] fix: env parsing
+[2026-05-12] add integration coverage
+[2026-05-13] bump version number
+[2026-05-13] cleaner condition
+[2026-05-13] better example code
+[2026-05-13] remove stale code
+[2026-05-13] missed this
+[2026-05-13] normalize indentation
+[2026-05-13] update packages
+[2026-05-13] degrade gracefully
+[2026-05-14] last bits
+[2026-05-14] session management
+[2026-05-14] one more thing
+[2026-05-14] tidy up readme
+[2026-05-14] remove unneeded packages
+[2026-05-14] health check api
+[2026-05-15] small improvement
+[2026-05-15] memory optimization
+[2026-05-15] small improvement
+[2026-05-15] installation guide update
+[2026-05-16] small win
+[2026-05-16] small tidy
+[2026-05-16] small improvement
+[2026-05-16] misc
+[2026-05-16] make configurable
+[2026-05-16] clean shutdown
+[2026-05-17] index for hot query
+[2026-05-17] cache the computed value
+[2026-05-17] utility cleanup
+[2026-05-17] straighten out code
+[2026-05-17] getting started update
+[2026-05-17] scaffolding only
+[2026-05-17] one more thing
+[2026-05-19] code examples in docs
+[2026-05-19] fix: import typo
+[2026-05-19] misc
+[2026-05-19] minor update
