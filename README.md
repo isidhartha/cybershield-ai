@@ -74,7 +74,7 @@ Go to `http://localhost:3000`. Paste in code, a GitHub URL, or a file path and h
 
 ## Optional: Add external scanners
 
-CyberShield has built-in scanners that work out of the box. If you have these tools installed on your system, it'll use them automatically for more comprehensive coverage:
+CyberShield has built-in scanners that work without anything extra installed. If you have these tools on your system, it'll pick them up automatically and use them on top of the defaults:
 
 ```bash
 # gitleaks — excellent for git history scanning
