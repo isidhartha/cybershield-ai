@@ -27,9 +27,9 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379"
 
     # External tool paths
-    gitleaks_path: str = "/usr/local/bin/gitleaks"
-    trufflehog_path: str = "/usr/local/bin/trufflehog"
-    bearer_path: str = "/usr/local/bin/bearer"
+    gitleaks_path: str = "gitleaks"
+    trufflehog_path: str = "trufflehog"
+    bearer_path: str = "bearer"
 
     # API URLs
     osv_api_url: str = "https://api.osv.dev/v1"
@@ -39,7 +39,7 @@ class Settings(BaseSettings):
     max_scan_size_mb: int = 50
     report_output_dir: str = "./reports"
     log_level: str = "INFO"
-    cors_origins: list[str] = ["http://localhost:3000", "http://localhost:5173"]
+    cors_origins: list[str] = ["http://localhost:3004", "http://localhost:5173"]
 
     # Security
     secret_key: str = "changeme-in-production-use-strong-random-key"

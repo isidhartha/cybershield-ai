@@ -39,36 +39,59 @@ The target user is a developer who wants to check their own code before it ships
 
 ## How to run it
 
-**Prerequisites**: Docker and Docker Compose. An OpenAI API key for the AI analysis features (the scanner itself works without one).
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- Git
+- Redis (`redis-server`)
+- Ollama (optional, for running AI features without any API key — https://ollama.com)
 
-**1. Clone the repo**
+### Setup
 
 ```bash
-git clone https://github.com/isidhartha/cybershield-ai.git
+# 1. Clone and enter the project
+git clone https://github.com/isidhartha/cybershield-ai
 cd cybershield-ai
-```
 
-**2. Configure**
+# 2. Create virtual environment
+# Windows:
+python -m venv venv
+venv\Scripts\activate
+# Mac/Linux:
+python3 -m venv venv
+source venv/bin/activate
 
-```bash
+# 3. Install Python dependencies
+pip install -r backend/requirements.txt
+
+# 4. Configure environment
+# Windows:
+copy .env.example .env
+# Mac/Linux:
 cp .env.example .env
+# Open .env and fill in at least one AI provider key
+# OR set AI_PROVIDER=ollama to run AI features without any API key
+# Note: the built-in scanners work with no AI key at all
+
+# 5. Create reports directory
+mkdir reports
+
+# 6. Start services
+# Redis (in a terminal):
+redis-server
+
+# 7. Run the backend
+cd backend
+uvicorn main:app --reload --port 8004
+
+# 8. Run the frontend (in a new terminal, from project root)
+cd frontend
+npm install
+npm run dev -- --port 3004
 ```
 
-Add your API key to `.env`:
-
-```
-OPENAI_API_KEY=sk-your-key-here
-```
-
-**3. Start everything**
-
-```bash
-docker-compose up --build
-```
-
-**4. Open the dashboard**
-
-Go to `http://localhost:3000`. Paste in code, a GitHub URL, or a file path and hit scan.
+**Dashboard**: http://localhost:3004  
+**API docs**: http://localhost:8004/docs
 
 ---
 
